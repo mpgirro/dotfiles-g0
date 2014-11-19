@@ -6,6 +6,7 @@ bash_profile
 bashrc
 emacs
 vimrc
+ssh
 )
 
 REPOPATH=$(pwd)

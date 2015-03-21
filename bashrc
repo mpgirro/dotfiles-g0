@@ -8,7 +8,13 @@ else
    alias -- -=popd
 fi
 alias ~=dirs
-alias ls='ls -CF'
+
+# make ls colorful
+force_color_prompt=yes
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls -CF $LS_OPTIONS'
+
 alias ll='ls -l'
 alias gd=pushd
 #alias /='history 20'
@@ -18,3 +24,6 @@ alias texclean='rm *.aux *.blg *.dvi *.glo *.idx *.lof *.log *.lot *.toc'
 export PS1='[\u:\w:\!] '
 set notify
 set history=100
+
+
+alias ls='ls '

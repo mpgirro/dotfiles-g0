@@ -18,6 +18,7 @@ ssh
 )
 
 echo "setting up binaries"
+mkdir -p $HOME/bin/
 for BIN_F in "${BIN_LIST[@]}" ; do
 	echo "  ==> $BIN_F"
 	cp $REPOPATH/bin/$BIN_F $HOME/bin/$BIN_F

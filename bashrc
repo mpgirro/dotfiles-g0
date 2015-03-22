@@ -26,3 +26,4 @@ set notify
 set history=100
 
 export PATH="$HOME/bin:$PATH"
+export TERM=xterm-256color

@@ -20,7 +20,7 @@
 (load-library "uncompress")
 (setq auto-mode-alist (cons '("\\.z$" . uncompress-while-visiting) auto-mode-alist))
 ;;; Emacs-w3 configuration options
-(setq load-path (cons 
+(setq load-path (cons
 		 (expand-file-name "/usr/local/share/emacs/site-lisp")
 		 load-path))
 (autoload 'w3-preview-this-buffer "w3" "WWW Previewer" t)
@@ -41,7 +41,7 @@
 (setq w3-default-homepage "/usr/ftp/pub/index.html#lehre")
 (setq w3-reuse-buffers 'yes)
 ;(setq-default url-be-asynchronous t)
-;(setq-default url-proxy-services 
+;(setq-default url-proxy-services
 ;	      '(("http" . "http://squid.infosys.tuwien.ac.at:3128/")
 ;		("ftp" . "http://squid.infosys.tuwien.ac.at:3128/")))
 (setq url-keep-history t)
@@ -52,3 +52,6 @@
 (server-start)
 (setq server-temp-file-regexp "/tmp/")
 (put 'save-buffers-kill-emacs 'disabled t)
+;; Set themes loading path
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'smyx t)

@@ -15,6 +15,7 @@ bashrc
 emacs
 vimrc
 ssh
+emacs.d
 )
 
 echo "setting up binaries"

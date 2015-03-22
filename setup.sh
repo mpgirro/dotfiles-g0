@@ -19,15 +19,14 @@ ssh
 
 echo "setting up binaries"
 for BIN_F in "${BIN_LIST[@]}" ; do
+	echo "\t=> $BIN_F"
 	cp $REPOPATH/bin/$BIN_F $HOME/bin/$BIN_F
 done
 
-
+echo "linking dotfiles"
 for DOT_F in "${DOT_LIST[@]}" ; do
-	echo "removing ~/.$DOT_F"
+	echo "\t=> $REPOPATH/$DOT_F"
 	rm -r ~/.$DOT_F >/dev/null 2>&1
-
-	echo "linking -$REPOPATH/$DOT_F"
 	ln -s $REPOPATH/$DOT_F ~/.$DOT_F
 done
 
